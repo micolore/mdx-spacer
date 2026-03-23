@@ -26,5 +26,5 @@
 
 ---
 
-**Author**: [你的名字]
+**Author**: [kubrick]
 **License**: MIT
