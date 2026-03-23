@@ -1,0 +1,42 @@
+{
+  "name": "mdx-spacer",
+  "displayName": "MDX Spacer",
+  "publisher": "kubrick",
+  "author": {
+    "name": "kubrick"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mdx-spacer.addSpaces",
+        "title": "MDX: 每行末尾加双空格"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceExtname == .mdx",
+          "command": "mdx-spacer.addSpaces"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0"
+  }
+}
